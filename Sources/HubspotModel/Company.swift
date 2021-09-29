@@ -4,8 +4,8 @@ import Vapor
 public final class Company: FluentModel {
     public static let schema = "companies"
     
-    @ID(key: .id)
-    public var id: UUID?
+    @ID(custom: .id, generatedBy: .database)
+    public var id: Int?
     
     @OptionalField(key: .receivedAt)
     public var receivedAt: Date?
@@ -181,7 +181,7 @@ public final class Company: FluentModel {
     
     public init() {}
     
-    public init(id: UUID? = nil, receivedAt: Date? = nil, lastModified: Date? = nil, portalId: Int8? = nil, city: String? = nil, country: String? = nil, contactedNotes: Int? = nil, phone: String? = nil, twitterHandle: String? = nil, addressAdditional: String? = nil, childCompanies: Int? = nil, targetAccountProbability: String? = nil, timezone: String? = nil, website: String? = nil, creation: Date? = nil, companyDescription: String? = nil, recentConversionEvent: String? = nil, totalMoneyRaised: String? = nil, analyticsFirstTimestamp: String? = nil, name: String? = nil, notesLastUpdated: Date? = nil, zip: String? = nil, openDeals: Int? = nil, state: String? = nil, additionalAnalyticsSourceData: String? = nil, lastSalesActivityTimestamp: String? = nil, objectId: String? = nil, isPublic: Bool? = nil, annualRevenue: String? = nil, firstContactCreated: Date? = nil, analyticsSourceData: String? = nil, lastSalesActivity: Date? = nil, blockers: Int? = nil, numberEmployees: Int? = nil, address: String? = nil, analyticsLastVisit: String? = nil, lastOpenTask: Date? = nil, decisionMakers: Int? = nil, isDeleted: Bool? = nil, notes: Int? = nil, domain: String? = nil, foundedYear: String? = nil, visits: Int? = nil, analyticsSource: String? = nil, uuidTs: Date? = nil, lastContacted: String? = nil, associatedContacts: Int? = nil, conversionEvents: Int? = nil, pageViews: Int? = nil, contactsWithBuyingRoles: Int? = nil, linkedinPage: String? = nil, linkedinBio: String? = nil, recentConversion: Date? = nil, facebookPage: String? = nil, firstConversion: Date? = nil, industry: String? = nil, webTechnologies: String? = nil, firstConversionEvent: String? = nil) {
+    public init(id: Int? = nil, receivedAt: Date? = nil, lastModified: Date? = nil, portalId: Int8? = nil, city: String? = nil, country: String? = nil, contactedNotes: Int? = nil, phone: String? = nil, twitterHandle: String? = nil, addressAdditional: String? = nil, childCompanies: Int? = nil, targetAccountProbability: String? = nil, timezone: String? = nil, website: String? = nil, creation: Date? = nil, companyDescription: String? = nil, recentConversionEvent: String? = nil, totalMoneyRaised: String? = nil, analyticsFirstTimestamp: String? = nil, name: String? = nil, notesLastUpdated: Date? = nil, zip: String? = nil, openDeals: Int? = nil, state: String? = nil, additionalAnalyticsSourceData: String? = nil, lastSalesActivityTimestamp: String? = nil, objectId: String? = nil, isPublic: Bool? = nil, annualRevenue: String? = nil, firstContactCreated: Date? = nil, analyticsSourceData: String? = nil, lastSalesActivity: Date? = nil, blockers: Int? = nil, numberEmployees: Int? = nil, address: String? = nil, analyticsLastVisit: String? = nil, lastOpenTask: Date? = nil, decisionMakers: Int? = nil, isDeleted: Bool? = nil, notes: Int? = nil, domain: String? = nil, foundedYear: String? = nil, visits: Int? = nil, analyticsSource: String? = nil, uuidTs: Date? = nil, lastContacted: String? = nil, associatedContacts: Int? = nil, conversionEvents: Int? = nil, pageViews: Int? = nil, contactsWithBuyingRoles: Int? = nil, linkedinPage: String? = nil, linkedinBio: String? = nil, recentConversion: Date? = nil, facebookPage: String? = nil, firstConversion: Date? = nil, industry: String? = nil, webTechnologies: String? = nil, firstConversionEvent: String? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.lastModified = lastModified
