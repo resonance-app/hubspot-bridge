@@ -5,7 +5,7 @@ public final class ContactList: FluentModel, Content {
     public static let schema = "contact_lists"
     
     @ID(custom: .id, generatedBy: .database)
-    public var id: Int?
+    public var id: String?
     
     @OptionalField(key: .receivedAt)
     public var receivedAt: Date?
@@ -57,7 +57,7 @@ public final class ContactList: FluentModel, Content {
     
     public init() {}
     
-    public init(id: Int? = nil, receivedAt: Date? = nil, metaDataProcessing: String? = nil, metaDataSize: Int8? = nil, uuidTs: Date? = nil, authorId: Int8? = nil, deletable: Bool? = nil, internalListId: Int8? = nil, listType: String? = nil, archived: Bool? = nil, createdAt: Date? = nil, mdLastSizeChange: Date? = nil, name: String? = nil, mdLastProcessingStateChange: Date? = nil, portalId: Int8? = nil, updatedAt: Date? = nil, dynamic: Bool? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, metaDataProcessing: String? = nil, metaDataSize: Int8? = nil, uuidTs: Date? = nil, authorId: Int8? = nil, deletable: Bool? = nil, internalListId: Int8? = nil, listType: String? = nil, archived: Bool? = nil, createdAt: Date? = nil, mdLastSizeChange: Date? = nil, name: String? = nil, mdLastProcessingStateChange: Date? = nil, portalId: Int8? = nil, updatedAt: Date? = nil, dynamic: Bool? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.metaDataProcessing = metaDataProcessing

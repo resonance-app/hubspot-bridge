@@ -4,8 +4,8 @@ import Vapor
 public final class FormSubmission: FluentModel, Content {
     public static let schema = "form_submissions"
     
-    @ID(key: .id)
-    public var id: UUID?
+    @ID(custom: .id, generatedBy: .database)
+    public var id: String?
     
     @OptionalField(key: .receivedAt)
     public var receivedAt: Date?

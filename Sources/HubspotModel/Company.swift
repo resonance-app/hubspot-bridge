@@ -5,13 +5,13 @@ public final class Company: FluentModel {
     public static let schema = "companies"
     
     @ID(custom: .id, generatedBy: .database)
-    public var id: Int?
+    public var id: String?
     
     @OptionalField(key: .receivedAt)
     public var receivedAt: Date?
     
     @OptionalField(key: .lastModified)
-    public var lastModified: Date?
+    public var lastModified: String?
     
     @OptionalField(key: .portalId)
     public var portalId: Int8?
@@ -35,7 +35,7 @@ public final class Company: FluentModel {
     public var addressAdditional: String?
     
     @OptionalField(key: .childCompanies)
-    public var childCompanies: Int?
+    public var childCompanies: String?
     
     @OptionalField(key: .targetAccountProbability)
     public var targetAccountProbability: String?
@@ -71,7 +71,7 @@ public final class Company: FluentModel {
     public var zip: String?
     
     @OptionalField(key: .openDeals)
-    public var openDeals: Int?
+    public var openDeals: String?
     
     @OptionalField(key: .state)
     public var state: String?
@@ -86,25 +86,25 @@ public final class Company: FluentModel {
     public var objectId: String?
     
     @OptionalField(key: .isPublic)
-    public var isPublic: Bool?
+    public var isPublic: String?
     
     @OptionalField(key: .annualRevenue)
     public var annualRevenue: String?
     
     @OptionalField(key: .firstContactCreated)
-    public var firstContactCraeted: Date?
+    public var firstContactCraeted: String?
     
     @OptionalField(key: .analyticsSourceData)
     public var analyticsSourceData: String?
     
     @OptionalField(key: .lastSalesActivity)
-    public var lastSalesActivity: Date?
+    public var lastSalesActivity: String?
     
     @OptionalField(key: .blockers)
-    public var blockers: Int?
+    public var blockers: String?
     
     @OptionalField(key: .numberEmployees)
-    public var numberEmployees: Int?
+    public var numberEmployees: String?
     
     @OptionalField(key: .address)
     public var address: String?
@@ -113,16 +113,16 @@ public final class Company: FluentModel {
     public var analyticsLastVisit: String?
     
     @OptionalField(key: .lastOpenTask)
-    public var lastOpenTask: Date?
+    public var lastOpenTask: String?
     
     @OptionalField(key: .decisionMakers)
-    public var decisionMakers: Int?
+    public var decisionMakers: String?
     
     @OptionalField(key: .isDeleted)
     public var isDeleted: Bool?
     
     @OptionalField(key: .notes)
-    public var notes: Int?
+    public var notes: String?
     
     @OptionalField(key: .domain)
     public var domain: String?
@@ -131,7 +131,7 @@ public final class Company: FluentModel {
     public var foundedYear: String?
     
     @OptionalField(key: .visits)
-    public var visits: Int?
+    public var visits: String?
     
     @OptionalField(key: .analyticsSource)
     public var analyticsSource: String?
@@ -143,17 +143,16 @@ public final class Company: FluentModel {
     public var lastContacted: String?
     
     @OptionalField(key: .associatedContacts)
-    public var associatedContacts: Int?
+    public var associatedContacts: String?
     
     @OptionalField(key: .conversionEvents)
-    public var conversionEvents: Int?
+    public var conversionEvents: String?
     
     @OptionalField(key: .pageViews)
-    public var pageViews: Int?
+    public var pageViews: String?
     
     @OptionalField(key: .contactsWithBuyingRoles)
-    public var contactsWithBuyingRoles: Int?
-    
+    public var contactsWithBuyingRoles: String?
     
     @OptionalField(key: .linkedinPage)
     public var linkedinPage: String?
@@ -181,7 +180,7 @@ public final class Company: FluentModel {
     
     public init() {}
     
-    public init(id: Int? = nil, receivedAt: Date? = nil, lastModified: Date? = nil, portalId: Int8? = nil, city: String? = nil, country: String? = nil, contactedNotes: Int? = nil, phone: String? = nil, twitterHandle: String? = nil, addressAdditional: String? = nil, childCompanies: Int? = nil, targetAccountProbability: String? = nil, timezone: String? = nil, website: String? = nil, creation: Date? = nil, companyDescription: String? = nil, recentConversionEvent: String? = nil, totalMoneyRaised: String? = nil, analyticsFirstTimestamp: String? = nil, name: String? = nil, notesLastUpdated: Date? = nil, zip: String? = nil, openDeals: Int? = nil, state: String? = nil, additionalAnalyticsSourceData: String? = nil, lastSalesActivityTimestamp: String? = nil, objectId: String? = nil, isPublic: Bool? = nil, annualRevenue: String? = nil, firstContactCreated: Date? = nil, analyticsSourceData: String? = nil, lastSalesActivity: Date? = nil, blockers: Int? = nil, numberEmployees: Int? = nil, address: String? = nil, analyticsLastVisit: String? = nil, lastOpenTask: Date? = nil, decisionMakers: Int? = nil, isDeleted: Bool? = nil, notes: Int? = nil, domain: String? = nil, foundedYear: String? = nil, visits: Int? = nil, analyticsSource: String? = nil, uuidTs: Date? = nil, lastContacted: String? = nil, associatedContacts: Int? = nil, conversionEvents: Int? = nil, pageViews: Int? = nil, contactsWithBuyingRoles: Int? = nil, linkedinPage: String? = nil, linkedinBio: String? = nil, recentConversion: Date? = nil, facebookPage: String? = nil, firstConversion: Date? = nil, industry: String? = nil, webTechnologies: String? = nil, firstConversionEvent: String? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, lastModified: String? = nil, portalId: Int8? = nil, city: String? = nil, country: String? = nil, contactedNotes: Int? = nil, phone: String? = nil, twitterHandle: String? = nil, addressAdditional: String? = nil, childCompanies: String? = nil, targetAccountProbability: String? = nil, timezone: String? = nil, website: String? = nil, creation: Date? = nil, companyDescription: String? = nil, recentConversionEvent: String? = nil, totalMoneyRaised: String? = nil, analyticsFirstTimestamp: String? = nil, name: String? = nil, notesLastUpdated: Date? = nil, zip: String? = nil, openDeals: String? = nil, state: String? = nil, additionalAnalyticsSourceData: String? = nil, lastSalesActivityTimestamp: String? = nil, objectId: String? = nil, isPublic: String? = nil, annualRevenue: String? = nil, firstContactCreated: String? = nil, analyticsSourceData: String? = nil, lastSalesActivity: String? = nil, blockers: String? = nil, numberEmployees: String? = nil, address: String? = nil, analyticsLastVisit: String? = nil, lastOpenTask: String? = nil, decisionMakers: Int? = nil, isDeleted: String? = nil, notes: String? = nil, domain: String? = nil, foundedYear: String? = nil, visits: String? = nil, analyticsSource: String? = nil, uuidTs: Date? = nil, lastContacted: String? = nil, associatedContacts: String? = nil, conversionEvents: String? = nil, pageViews: String? = nil, contactsWithBuyingRoles: String? = nil, linkedinPage: String? = nil, linkedinBio: String? = nil, recentConversion: Date? = nil, facebookPage: String? = nil, firstConversion: Date? = nil, industry: String? = nil, webTechnologies: String? = nil, firstConversionEvent: String? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.lastModified = lastModified

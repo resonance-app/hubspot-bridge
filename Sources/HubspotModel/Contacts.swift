@@ -5,7 +5,7 @@ public final class Contact: FluentModel, Content {
     public static let schema = "contacts"
     
     @ID(custom: .id, generatedBy: .database)
-    public var id: Int?
+    public var id: String?
     
     @OptionalField(key: .receivedAt)
     public var receivedAt: Date?
@@ -54,7 +54,7 @@ public final class Contact: FluentModel, Content {
     
     public init() {}
     
-    public init(id: Int? = nil, receivedAt: Date? = nil, formSubmissions: String? = nil, portalId: Int8? = nil, firstname: String? = nil, listMemberships: String? = nil, profileUrl: String?, lastname: String? = nil, uuidTs: Date? = nil, addedAt: Date? = nil, canonicalVid: Int8? = nil, isContact: Bool? = nil, lastModifiedDate: String? = nil, email: String? = nil, leadGuid: String? = nil, profileToken: String? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, formSubmissions: String? = nil, portalId: Int8? = nil, firstname: String? = nil, listMemberships: String? = nil, profileUrl: String?, lastname: String? = nil, uuidTs: Date? = nil, addedAt: Date? = nil, canonicalVid: Int8? = nil, isContact: Bool? = nil, lastModifiedDate: String? = nil, email: String? = nil, leadGuid: String? = nil, profileToken: String? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.formSubmissions = formSubmissions

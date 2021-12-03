@@ -4,8 +4,8 @@ import Vapor
 public final class ContactIdentityProfile: FluentModel {
     public static let schema = "contact_identity_profiles"
     
-    @ID(key: .id)
-    public var id: UUID?
+    @ID(custom: .id, generatedBy: .database)
+    public var id: String?
     
     @OptionalField(key: .receivedAt)
     public var receivedAt: Date?
@@ -27,7 +27,7 @@ public final class ContactIdentityProfile: FluentModel {
     
     public init() {}
     
-    public init(id: UUID? = nil, receivedAt: Date? = nil, savedAt: Date? = nil, uuidTs: Date? = nil, contactId: Int8? = nil, deletedChanged: Date? = nil, identities: String? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, savedAt: Date? = nil, uuidTs: Date? = nil, contactId: Int8? = nil, deletedChanged: Date? = nil, identities: String? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.savedAt = savedAt
