@@ -14,7 +14,7 @@ public final class Contact: FluentModel, Content {
     public var formSubmissions: String?
     
     @OptionalField(key: .portalId)
-    public var portalId: Int8?
+    public var portalId: Int?
     
     @OptionalField(key: .firstname)
     public var firstname: String?
@@ -35,7 +35,7 @@ public final class Contact: FluentModel, Content {
     public var addedAt: Date?
     
     @OptionalField(key: .canonicalVid)
-    public var canonicalVid: Int8?
+    public var canonicalVid: Int?
     
     @OptionalField(key: .isContact)
     public var isContact: Bool?
@@ -54,7 +54,7 @@ public final class Contact: FluentModel, Content {
     
     public init() {}
     
-    public init(id: String? = nil, receivedAt: Date? = nil, formSubmissions: String? = nil, portalId: Int8? = nil, firstname: String? = nil, listMemberships: String? = nil, profileUrl: String?, lastname: String? = nil, uuidTs: Date? = nil, addedAt: Date? = nil, canonicalVid: Int8? = nil, isContact: Bool? = nil, lastModifiedDate: String? = nil, email: String? = nil, leadGuid: String? = nil, profileToken: String? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, formSubmissions: String? = nil, portalId: Int? = nil, firstname: String? = nil, listMemberships: String? = nil, profileUrl: String?, lastname: String? = nil, uuidTs: Date? = nil, addedAt: Date? = nil, canonicalVid: Int? = nil, isContact: Bool? = nil, lastModifiedDate: String? = nil, email: String? = nil, leadGuid: String? = nil, profileToken: String? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.formSubmissions = formSubmissions

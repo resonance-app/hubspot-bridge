@@ -11,7 +11,7 @@ public final class ContactIdentity: FluentModel {
     public var receivedAt: Date?
     
     @OptionalField(key: .contactId)
-    public var contactId: Int8?
+    public var contactId: Int?
     
     @OptionalField(key: .isPrimary)
     public var isPrimary: Bool?
@@ -27,7 +27,7 @@ public final class ContactIdentity: FluentModel {
     
     public init() {}
     
-    public init(id: String? = nil, receivedAt: Date? = nil, contactId: Int8? = nil, isPrimary: Bool? = nil, timestamp: Date? = nil, type: String? = nil, uuidTs: Date? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, contactId: Int? = nil, isPrimary: Bool? = nil, timestamp: Date? = nil, type: String? = nil, uuidTs: Date? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.contactId = contactId

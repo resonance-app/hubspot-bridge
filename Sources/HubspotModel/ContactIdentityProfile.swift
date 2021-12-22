@@ -17,7 +17,7 @@ public final class ContactIdentityProfile: FluentModel {
     public var uuidTs: Date?
     
     @OptionalField(key: .contactId)
-    public var contactId: Int8?
+    public var contactId: Int?
     
     @OptionalField(key: .deletedChanged)
     public var deletedChanged: Date?
@@ -27,7 +27,7 @@ public final class ContactIdentityProfile: FluentModel {
     
     public init() {}
     
-    public init(id: String? = nil, receivedAt: Date? = nil, savedAt: Date? = nil, uuidTs: Date? = nil, contactId: Int8? = nil, deletedChanged: Date? = nil, identities: String? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, savedAt: Date? = nil, uuidTs: Date? = nil, contactId: Int? = nil, deletedChanged: Date? = nil, identities: String? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.savedAt = savedAt

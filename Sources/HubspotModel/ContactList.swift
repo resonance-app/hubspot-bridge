@@ -14,19 +14,19 @@ public final class ContactList: FluentModel, Content {
     public var metaDataProcessing: String?
     
     @OptionalField(key: .metaDataSize)
-    public var metaDataSize: Int8?
+    public var metaDataSize: Int?
     
     @OptionalField(key: .uuidTs)
     public var uuidTs: Date?
     
     @OptionalField(key: .authorId)
-    public var authorId: Int8?
+    public var authorId: Int?
     
     @OptionalField(key: .deletable)
     public var deletable: Bool?
     
     @OptionalField(key: .internalListId)
-    public var internalListId: Int8?
+    public var internalListId: Int?
     
     @OptionalField(key: .listType)
     public var listType: String?
@@ -47,7 +47,7 @@ public final class ContactList: FluentModel, Content {
     public var mdLastProcessingStateChange: Date?
     
     @OptionalField(key: .portalId)
-    public var portalId: Int8?
+    public var portalId: Int?
     
     @OptionalField(key: .updatedAt)
     public var updatedAt: Date?
@@ -57,7 +57,7 @@ public final class ContactList: FluentModel, Content {
     
     public init() {}
     
-    public init(id: String? = nil, receivedAt: Date? = nil, metaDataProcessing: String? = nil, metaDataSize: Int8? = nil, uuidTs: Date? = nil, authorId: Int8? = nil, deletable: Bool? = nil, internalListId: Int8? = nil, listType: String? = nil, archived: Bool? = nil, createdAt: Date? = nil, mdLastSizeChange: Date? = nil, name: String? = nil, mdLastProcessingStateChange: Date? = nil, portalId: Int8? = nil, updatedAt: Date? = nil, dynamic: Bool? = nil) {
+    public init(id: String? = nil, receivedAt: Date? = nil, metaDataProcessing: String? = nil, metaDataSize: Int? = nil, uuidTs: Date? = nil, authorId: Int? = nil, deletable: Bool? = nil, internalListId: Int? = nil, listType: String? = nil, archived: Bool? = nil, createdAt: Date? = nil, mdLastSizeChange: Date? = nil, name: String? = nil, mdLastProcessingStateChange: Date? = nil, portalId: Int? = nil, updatedAt: Date? = nil, dynamic: Bool? = nil) {
         self.id = id
         self.receivedAt = receivedAt
         self.metaDataProcessing = metaDataProcessing
